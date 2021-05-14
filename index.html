@@ -1,0 +1,62 @@
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menú principal</title>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="script/clases.js"></script>
+        <script src="script/funciones.js"></script>
+        <script src="script/filtrar.js"></script>
+        <script src="script/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body onload="cargarPeliculas(); cargarCategorias()">
+        <h1><img src="img/logo.png" width="80px"> EGZ VIDEOCLUB</h1>
+
+        <div id="contenido">
+        <div id="añadirPeli">
+            <h3>REGISTRAR PELÍCULA</h3>
+            <form action="" id="form">
+                <p><input type="text" placeholder="Nombre" id="nombre" required></p>
+                <p><input type="text" placeholder="Director" id="director" required></p>
+                <p><input type="number" placeholder="Año" id="anno" required></p>
+                <p><select name="categoria" id="categoria">
+                    <option selected="true" disabled="true">Categoría</option>
+                </select></p>
+                <p><input type="number" placeholder="Duración (minutos)" required id="duracion"></p>
+                <p><input type="text" placeholder="Url" id="url" required></p>
+                <p><button id="guardar" onclick="registrarDatos()">Guardar</button>&nbsp;<input type="reset"></p>
+            </form><br/><br/>
+
+                
+            <h3>CATEGORÍAS</h3>
+            <div id="listaCategorias"></div><br/>
+            <button id="nuevaCategoria" onclick="añadirCategoria()">Añadir Categoría</button>
+            <div id="añadirCat" style="display: none">
+                <form action="">
+                    <p><input type="text" placeholder="Nombre" id="nombreCat"></p>
+                    <p><button id="guardar" onclick="registrarCategoria()">Guardar</button>&nbsp;<input type="reset"></p>
+                    <p><button id="cancelar" onclick="cancelar('añadirCat')">Cancelar</button></p>
+                </form>
+            </div>
+        </div>
+        <div id="section">
+            <div id='busqueda'>
+                <input type='text' placeholder='Nombre' id='filtN' required>&nbsp; 
+                <input type='text' placeholder='Director' id='filtD' required>&nbsp; 
+                <input type='number' placeholder='Año' id='filtA' required>&nbsp; 
+                <button onclick='filtrar()'>Filtrar</button>
+                <button onclick="location.href='index.html'">Resetear</button>
+                <button id="ordenar_Nombre" onclick="ordenar(this.id)">Nombre &nbsp;<img src="img/abajo.png"></button>
+                <button id="ordenar_Año" onclick="ordenar(this.id)">Año &nbsp;<img src="img/abajo.png"></button>
+            </div>
+            <div id="listaPeliculas"></div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../img/fondo.jpg);
+	background-size: 100%;
+}
+
+#infoPelicula {
+    width: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+    margin-right: 60px;
+}
+
+#estadoAlquiler {
+    width: 50%;
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 60px;
+}
+
+#contenido {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 550;
+}
+
+button {
+    width: 400px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #7e7f80;
+    border-radius: 6px;
+    border: 2px solid #070707;
+    text-align-last: center;
+}
+
+button:hover {
+    background-color: rgb(102, 170, 170);
+    cursor: pointer;
+}
+
+.estado {
+    font-size: 28;
+    font-weight: bold;
+}
+
+h1 {
+    text-align-last: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 80;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../img/fondo.jpg);
+	background-size: 100%;
+}
+
+input[type="number"], input[type="text"]{
+    width:400px;
+    padding:8px 10px;
+    border:1px solid;
+    border-radius:4px;
+    background-color:#f6f6f6;
+    display:inline-block;
+    height: 40px;
+    font-size: 17px;
+}
+
